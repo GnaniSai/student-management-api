@@ -61,7 +61,7 @@ app.put("/students/:id", async (req, res) => {
       { new: true }
     );
     if(updateDetails){
-        res.status(200).json(updateDetails);
+        res.status(200).json({message: "Updated Succesfully",updateDetails});
     }else{
         res.status(200).json({message: "id not found",updateDetails});
     }
